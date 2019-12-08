@@ -36,6 +36,7 @@ class SwitchListener(private val plugin: Plugin): Listener {
     @EventHandler
     fun onConenct(event: ServerConnectEvent) {
         if (event.reason == ServerConnectEvent.Reason.JOIN_PROXY) return
+        if (!event.player.hasPermission("bungeenotify.watch")) return
 
         val message = config.getString("message-format").replace("%player%", event.player.displayName).replace("%server%", event.target.name)
 
