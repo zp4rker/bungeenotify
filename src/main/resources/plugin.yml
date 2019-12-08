@@ -1,0 +1,5 @@
+name: BungeeNotify
+main: com.zp4rker.bungeenotify.BungeeNotify
+version: ${project.version}
+author: zp4rker
+description: A simple plugin which notifies staff on certain events.
